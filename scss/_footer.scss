@@ -1,0 +1,23 @@
+.footer {
+   padding: 9px;
+	&__body {
+      border: 1px solid rgba($color: $white, $alpha: 0.4);
+      height: 55px;
+      background: rgba($color: $white, $alpha: 0.24);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+	}
+	&__text {
+      text-align: center;
+      font-weight: 400;
+      line-height: 17px;
+      color: rgba(255, 255, 255, 0.43);
+      padding:0 29px;
+      font-size: calc(12px + 3  * (100vw / $maxWidthContainer));
+	}
+	&__link {
+      color: rgba(255, 255, 255, 0.8);
+	}
+}
