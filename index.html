@@ -59,19 +59,18 @@
                <div class="header__menu menu">
                   <nav class="menu__body">
                      <ul class="menu__list">
-                        <li data-section="section1" class="menu__item active">
-                           <span href="" class="menu__link">Productive</span>
+                        <li onclick="activateItem(this, 'section1')" class="menu__item active">
+                           <button class="menu__link">Productive</button>
                         </li>
-                        <li data-section="section2" class="menu__item">
-                           <span class="menu__link">Information</span>
+                        <li onclick="activateItem(this, 'section2')" class="menu__item">
+                           <button class="menu__link">Information</button>
                         </li>
-                        <li data-section="section3" class="menu__item">
-                           <span class="menu__link">Motivation</span>
+                        <li onclick="activateItem(this, 'section3')" class="menu__item">
+                           <button class="menu__link">Motivation</button>
                         </li>
-                        <li data-section="section4" class="menu__item">
-                           <span class="menu__link">Posibilities</span>
+                        <li onclick="activateItem(this, 'section4')" class="menu__item">
+                           <button class="menu__link">Posibilities</button>
                         </li>
-
                      </ul>
                      <div class="menu__right">
                         <div class="menu__logos">
@@ -88,7 +87,7 @@
                               </svg>
                            </div>
                         </div>
-                        <button data-section="section4" class="menu__item">
+                        <button onclick="activateItem(this, 'section5')" class="menu__item rotate">
                            <span class="menu__span">Start now</span>
                         </button>
                      </div>
@@ -100,13 +99,67 @@
 
       <!--main-->
       <main class="main">
-         <section id="sections-container">
-            <section id="section1" class="hidden"></section>
-            <section id="section2" class="hidden"></section>
-            <section id="section3" class="hidden"></section>
-            <section id="section4" class="hidden"></section>
-         </section>
+         <section id="section1" class="productive section active-section">
+            <div class="container">
+               <div class="productive__body">
+                  <div class="productive__left p-left">
+                     <div class="p-left__top">
+                        <p class="p-left__text">Project</p>
+                        <h2 class="p-left__title">PRODUCTIVE</h2>
+                        <p class="p-left__text">
+                           Everything is in your hands, we only provide the opportunity to raise these hands! After all,
+                           you are the only one who can do it!
+                           <span class="p-left__text-blue">you are the only one who can do it!</span>
+                        </p>
+                        <p class="p-left__text">
+                           Everything is in your hands, we only provide the opportunity to raise these hands! After all,
+                           you are the only one who can do it!
+                           <span class="p-left__text-gray">you are the only one who can do it!</span>
+                        </p>
+                     </div>
+                     <div class="p-left__bottom">
+                        <div class="p-left__card p-left__card-1">
+                           <div class="p-left__text">system</div>
+                           <h3 class="p-left__sub-title">MODERN SYSTEM</h3>
+                           <div class="p-left__img">
+                              <img src="img/modern.png" alt="">
+                           </div>
+                           <div class="p-left__text">Time changes not only people, but also the way you improve
+                              yourself.</div>
+                        </div>
+                        <div class="p-left__card p-left__card-2">
+                           <div class="p-left__text">system</div>
+                           <h3 class="p-left__sub-title">INDIVIDUAL APPROACH</h3>
+                           <div class="p-left__img">
+                              <img src="img/individual.png" alt="">
+                           </div>
+                           <div class="p-left__text">Time changes not only people, but also the way you improve
+                              yourself.</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="productive__right p-right">
 
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="section2" class="section">
+            Section 2 content
+
+         </section>
+         <section id="section3" class="section">
+            Section 3 content
+
+         </section>
+         <section id="section4" class="section">
+            Section 4 content
+
+         </section>
+         <section id="section5" class="section">
+            Section 5 content
+
+         </section>
       </main>
 
       <!-- footer -->

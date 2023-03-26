@@ -4,7 +4,7 @@
    &__body{
       display: flex;
       justify-content: space-between;
-      background: rgba($color: $white, $alpha: 0.24);
+      background:$gray;
       border: 1px solid rgba($color: $white, $alpha: 0.4);
       border-radius: 30px;
       height: 56px;
@@ -25,7 +25,6 @@
    &__list {
       display: flex;
       height:100%;
-      gap: 1px;
    }
    &__span{
       transition: .2s;
@@ -47,6 +46,7 @@
       transition:.2s ;
       overflow: hidden;
       color: $white;
+      -webkit-tap-highlight-color: transparent;
    }
    &__item:hover,
    &__item:focus{
@@ -87,12 +87,10 @@
    }
    &__right {
       display: flex;
-      gap: 1px;
       width: auto;
    }
    &__logos {
       display: flex;
-      gap: 1px;
    }
    &__logo {
       display: flex;
@@ -105,6 +103,7 @@
       border-radius: 30px;
       cursor: pointer;
       transition:.2s ;
+      -webkit-tap-highlight-color: transparent;
    }
    &__logo:hover,
    &__logo:focus{
@@ -175,42 +174,42 @@
 }
 .menu{
    position: absolute;
-   top: 76px;
+   top: 74px;
+   right: 9px;
    width: auto;
    opacity: 0;
    border: 1px solid rgba($color: $white, $alpha: 0.4);
    border-radius: 30px;
    visibility: hidden;
    transition: .2s;
-   background: rgba($color: $white, $alpha: 0.24);
+   background: $gray;
    &._active{
       opacity: 1;
       visibility: visible;
    }
-   &__body{
-   }
    &__list {
       display: flex;
       flex-direction: column;
-      gap: 1px;
-   }
-   &__span{
-      transition: .2s;
    }
    &__item.active .menu__span{
-      visibility: hidden;
-      opacity: 0;
+      visibility: visible;
+      opacity: 1;
    }
    &__item {
       max-height: 56px;
    }
+   &__item.rotate{
+      max-height: 100%;
+      max-width: 56px;
+   }
+   &__item.rotate .menu__span{
+      writing-mode:vertical-rl;
+   }
+   &__item.rotate.active{
+      max-width: 56px;
+   }
    &__item::after{
-      content:'';
-      height: 0px;
-      width: 0px;
-      opacity: 0;
-      visibility: hidden;
-      transition: .2s;
+      display: none;
    }
    &__link {
       color: $white;
@@ -219,54 +218,23 @@
       transition: .2s;
    }
    &__item.active{
-      max-width: 56px;
-      background: #D9D9D9;
-      position: relative;
-   }
-   &__item.active::after{
-      position: absolute;
-      height: 22px;
-      width: 22px;
-      background: #000;
-      border-radius: 30px;
-      opacity: 1;
-      visibility: visible;
+      max-width: 150px;
+      background:rgba($color: $white, $alpha: 0.2);
    }
    &__item.active &__link{
-      visibility: hidden;
-      opacity: 0;
-   }
-   &__burger {
-      display: none;
-   }
-   &__burger svg{
-      pointer-events: none;
+      visibility: visible;
+      opacity: 1;
    }
    &__right {
-      display: flex;
-      gap: 1px;
-      width: auto;
+      flex-direction: column;
    }
    &__logos {
-      display: flex;
       flex-direction: column;
-      gap: 1px;
    }
    &__logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: $white;
-      height: 100%;
-      aspect-ratio: 1 / 1;
-      border: 1px solid rgba($color: $white, $alpha: 0.4);
-      border-radius: 30px;
-      cursor: pointer;
-      transition:.2s ;
-   }
-   &__logo:hover,
-   &__logo:focus{
-      background:rgba($color: $white, $alpha: 0.2);
+      max-width: 56px;
+      max-height: 56px;
+      aspect-ratio:none;
    }
 }
 }

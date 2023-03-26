@@ -2,3 +2,9 @@
 ::-webkit-scrollbar {
    display: none;
 }
+
+// when copu text<=>
+::selection {
+   color: $white;
+   background: $gray;
+}

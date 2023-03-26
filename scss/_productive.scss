@@ -1,0 +1,61 @@
+.productive {
+   padding: 0 9px;
+	&__body {
+   display: grid;
+   grid-template-rows: 1fr;
+   grid-template-columns: 1fr 1fr;
+   gap: 9px;
+   max-height: calc(100svh - 150px);
+	}
+	&__left,
+   &__right {
+      border-radius: 27.5px;
+      overflow: hidden;
+      border: 1px solid rgba($color: $white, $alpha: 0.4);
+	}
+	&__right {
+      background: #604a4a;
+	}
+}
+
+
+.p-left {
+   background: linear-gradient(180deg, #202020 0%, rgba(130, 130, 130, 0.14) 100%);
+	&__top {
+      padding: 50px 40px;
+	}
+	&__text {
+      font-weight: 700;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.65);
+	}
+	&__title {
+      font-weight: 900;
+      font-size: 60px;
+      line-height: 73px;
+      color: rgba(255, 255, 255, 0.87);
+      text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+	}
+   &__sub-title{
+      
+   }
+	&__text-blue {
+	}
+	&__text-gray {
+	}
+	&__bottom {
+	}
+	&__card {
+	}
+	&__card-1 {
+	}
+	&__img {
+	}
+	&__card-2 {
+	}
+}
+.p-right{
+   background: url('../img/robot.png');
+   background-repeat: no-repeat;
+   background-size: cover;
+}
