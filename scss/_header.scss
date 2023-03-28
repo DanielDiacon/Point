@@ -1,6 +1,7 @@
 .header {
    padding: 9px;   
    user-select: none;
+   z-index: 100;
    &__body{
       display: flex;
       justify-content: space-between;

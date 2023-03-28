@@ -109,6 +109,7 @@ main {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  z-index: 100;
 }
 .header__body {
   display: flex;
@@ -364,6 +365,12 @@ main {
   padding: 0 29px;
   font-size: calc(12px + 0.24vw);
 }
+@media only screen and (max-width: 767.98px) {
+  .footer__text {
+    font-size: calc(10px + 0.16vw);
+    padding: 0 20px;
+  }
+}
 .footer__link {
   color: rgba(255, 255, 255, 0.8);
 }
@@ -416,7 +423,7 @@ main {
   grid-template-rows: 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 9px;
-  max-height: calc(100svh - 150px);
+  min-height: calc(100svh - 150px);
 }
 .productive__left, .productive__right {
   border-radius: 27.5px;
@@ -429,28 +436,147 @@ main {
 
 .p-left {
   background: linear-gradient(180deg, #202020 0%, rgba(130, 130, 130, 0.14) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .p-left__top {
-  padding: 50px 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .p-left__text {
-  font-weight: 700;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.65);
+  font-size: calc(10px + 0.32vw);
+  color: rgba(255, 255, 255, 0.6509803922);
 }
 .p-left__title {
-  font-weight: 900;
-  font-size: 60px;
-  line-height: 73px;
-  color: rgba(255, 255, 255, 0.87);
-  text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  font-weight: 700;
+  font-size: calc(15px + 0.4vw);
+  color: rgba(255, 255, 255, 0.8705882353);
 }
-.p-right {
-  background: url("../img/robot.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+.p-left__text-blue {
+  color: #9BC5C3;
+}
+.p-left__bottom {
+  flex: 1;
+  display: flex;
+}
+.p-left__sub-title {
+  text-align: center;
+  font-size: calc(10px + 0.32vw);
+  margin: 0 auto;
+}
+.p-left__card-1 {
+  background: linear-gradient(90deg, #616161 0%, #9BC5C3 100%);
+}
+.p-left__card-2 {
+  background: #646A78;
+  text-align: right;
+}
+.p-left__card {
+  padding: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: calc(10px + 0.32vw);
+}
+.p-left__img {
+  align-self: center;
+  width: 60%;
+  aspect-ratio: 1/1;
+  position: relative;
+}
+.p-left__img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
+.p-right {
+  background: url("../img/robot.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.p-right__text {
+  font-size: calc(10px + 0.32vw);
+}
+.p-right__btn {
+  padding: 8px 42px;
+  background: rgba(217, 217, 217, 0.4);
+  border: 1px solid #FFFFFF;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  font-weight: 600;
+  color: #ffffff;
+}
+.p-right__btn:hover {
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+  transform: translateY(4px);
+}
+.p-right__icon-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.p-right__icon-play:hover {
+  opacity: 0.6;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .productive__body {
+    display: flex;
+    flex-direction: column;
+  }
+  .p-left__title {
+    font-weight: 970;
+    text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.2509803922);
+  }
+  .p-left__bottom {
+    display: none;
+  }
+  .p-right {
+    background-position: top center;
+    flex: 1;
+  }
+  .p-right__btn {
+    padding: 5px 20px;
+    margin-bottom: 10px;
+    transition: 0.2s;
+    color: #ffffff;
+    font-size: 10px;
+  }
+  .p-right__btn:hover {
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    transform: translateY(4px);
+  }
+  .p-right__icon-play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .p-right__icon-play svg {
+    width: 50px;
+    height: 50px;
+  }
+}
 /* Define the section styles */
 .section {
   z-index: -2;
@@ -458,6 +584,7 @@ main {
   opacity: 0;
   max-height: calc(100svh - 150px);
   overflow: hidden;
+  transition: 0.5s;
 }
 
 /* Show the active section */
