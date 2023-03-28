@@ -1,15 +1,22 @@
 // import fonts/font <=>
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700;900&display=swap');
+@font-face {
+   font-family: AvanGarde_ff;
+   src: url(../font/AvantGarde-Normal.otf);
+}
 // default font / default font size <=>
 $fontFamily: "Montserrat", sans-serif;
+$fontFamilyLato: "Lato", sans-serif;
+$fontFamilyAvanGarde: AvanGarde_ff;
+
 $fontSize: 14;
 // base colors <=>
 $black: #070707;
 $white: #ffffff;
 $gray: #424242;
-
 // max width for container <=>
-$maxWidthContainer: 1250;
+$maxWidthContainer: 2000;
 // size gadjes for adapted and other <=>
 $tablet: 991.98px;
 $mobile: 767.98px;

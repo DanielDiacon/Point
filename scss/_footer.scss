@@ -15,6 +15,7 @@
       line-height: 17px;
       color: rgba(255, 255, 255, 0.43);
       padding:0 29px;
+      font-family: $fontFamilyAvanGarde;
       font-size: calc(12px + 3  * (100vw / $maxWidthContainer));
       @media only screen and (max-width:$mobile) {
          font-size: calc(10px + 2  * (100vw / $maxWidthContainer));
