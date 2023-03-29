@@ -1,0 +1,170 @@
+.login{
+   width:100%;
+   height: calc(100svh - 150px);
+   padding: 0 9px;
+   z-index: 10;
+   &__body{
+      display: grid;
+      grid-template-columns: 1.2fr .5fr;
+      grid-template-rows: 1fr;
+      width:100%;
+      height: calc(100svh - 150px);
+      gap: 9px;
+   }
+   &__left,
+   &__right {
+      border-radius: 27.5px;
+      overflow: hidden;
+      border: 1px solid rgba($color: $white, $alpha: 0.4);
+	}
+   &__left{
+      background:$gray;
+   }
+   &__right{
+      position: relative;
+      &::after{
+         content: '';
+         z-index: -1;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         width: 100%;
+         height: 100%;
+         background: url('../img/hand.jpg');
+         background-repeat: no-repeat;
+         background-size: cover;
+         background-position: center;
+      }
+   }
+   @media screen and (max-width:$mobile) and (max-width:$tablet){
+      &__body{
+         grid-template-columns: .75fr .5fr;
+         grid-template-rows: 1fr;
+      }
+   }
+   @media only screen and (max-width:$mobile) {
+      &__body{
+         grid-template-columns: 1fr;
+      }
+      &__right{
+         display: none;
+      }
+   }
+}
+
+.form {
+   width: 50%;
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   margin: auto;
+   display: flex;
+   flex-direction: column;
+   gap: 25px;
+   font-family: $fontFamilyLato;
+   padding: 20px;
+   @media only screen and (max-width:$mobile) {
+      width: 80%;
+   }
+   &__title {
+      font-weight: 700;
+      font-size: calc(20px + 5  * (100vw / $maxWidthContainer));
+      color: $white;
+      text-align: center;
+   }
+   &__sub-text {
+      font-weight: 600;
+      font-size: calc(10px + 4  * (100vw / $maxWidthContainer));
+      text-align: center;
+   }
+   &__span {
+      color: #AFBDDD;
+   }
+   &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+   }
+   &__inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &__row {
+      display: flex;
+      flex-direction: column;
+   }
+   &__label {
+      font-weight: 800;
+      font-size: calc(10px + 0  * (100vw / $maxWidthContainer));
+      color: #AFBDDD;
+   }
+   &__input{
+      background: rgba(217, 217, 217, 0.21);
+      border: 2px solid $white;
+      padding:10px 20px;
+      border-radius: 12px;
+      color: $white;
+      font-size: calc(10px + 4  * (100vw / $maxWidthContainer));
+   }
+   &__buttons {
+      display: flex;
+      gap: 20px;
+   }
+   &__btn {
+      padding:10px 20px;
+      font-size: 16px;
+      border-radius: 12px;
+      width: 100%;
+      font-size: calc(10px + 4  * (100vw / $maxWidthContainer));
+      white-space: nowrap;
+      color: $white;
+   }
+   &__btn-accesnt {
+      background: #AFBDDD;
+   }
+   &__btn-border {
+      background: rgba(217, 217, 217, 0.21);
+      border: 2px solid $white;
+      color: #AFBDDD;
+   }
+   &__bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+   }
+   &__icons {
+      display: flex;
+      justify-content: space-evenly;
+      @media only screen and (max-width:$mobile) {
+         justify-content: space-between;
+
+      }
+   }
+   &__icon-wrapper {
+      width: 50px;
+      height: 50px;
+      background: #d9d9d929;
+      border: 1px solid $white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 40px;
+   }
+   &__icon {
+      width: 30px;
+      height: 30px;
+      color: #ffffff7a;
+      transition: .2s;
+      cursor: pointer;
+   }
+   &__icon-wrapper:hover &__icon{
+      color: $white;
+   }
+	&__sub-title {
+      text-align: center;
+      font-size: calc(15px + 5  * (100vw / $maxWidthContainer));
+	}
+}
+

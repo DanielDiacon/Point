@@ -17,7 +17,8 @@
 
 
 .p-left {
-   background: linear-gradient(180deg, #202020 0%, rgba(130, 130, 130, 0.14) 100%);
+   background:$gray;
+
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -43,6 +44,9 @@
       flex: 1;
       display: flex;
       font-family: $fontFamilyLato;
+      border-radius: 27.5px;
+      overflow: hidden;
+      border: 1px solid rgba($color: $white, $alpha: 0.4);
 	}
    &__sub-title{
       text-align: center;
@@ -51,10 +55,11 @@
       font-family: $fontFamilyLato;
    }
 	&__card-1 {
-      background: linear-gradient(90deg, #61616190 0%, #9bc5c390 100%);
+      background: linear-gradient(90deg, #616161 0%, #9bc5c3 100%);
+      
 	}
    &__card-2 {
-      background: #646a7890;
+      background: #646a78;
       text-align: right;
 	}
    &__card{
@@ -64,6 +69,7 @@
       flex-direction: column;
       justify-content: space-between;
       gap: calc(10px + 4  * (100vw / $maxWidthContainer));
+      
    }
 	&__img {
       align-self: center;
@@ -98,8 +104,11 @@
       background: url('../img/robot.jpg');
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      background-position: top center;
       transition: .3s;
+      @media only screen and (max-width:$mobileSmall) {
+      background-position: center;
+      }
    }
    &:hover::after{
       width: 105%;

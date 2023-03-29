@@ -51,7 +51,7 @@ body {
 }
 // the footer to the bottom of the page <=>
 main {
-   //flex: 1 1 auto;
+   flex: 1 1 auto;
    max-height: calc(100svh - 150px);
 }
 //import scss modules<=>
@@ -60,18 +60,22 @@ main {
 @import "_loading.scss";
 @import "_scrollbar.scss";
 @import "_productive.scss";
+@import "_login.scss";
+@import "_info.scss";
+@import "_posibilities.scss";
 
 /* Define the section styles */
 .section {
-   z-index: -2;
-   visibility: hidden;
    opacity: 0;
    max-height: calc(100svh - 150px);
    overflow: hidden;
    transition: .5s;
+   visibility: hidden;
+   position: absolute;
 }
 /* Show the active section */
 .active-section {
    visibility: visible;
    opacity: 1;
 }
+

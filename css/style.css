@@ -106,6 +106,7 @@ body {
 }
 
 main {
+  flex: 1 1 auto;
   max-height: calc(100svh - 150px);
 }
 
@@ -438,7 +439,7 @@ main {
 }
 
 .p-left {
-  background: linear-gradient(180deg, #202020 0%, rgba(130, 130, 130, 0.14) 100%);
+  background: #424242;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -465,6 +466,9 @@ main {
   flex: 1;
   display: flex;
   font-family: "Lato", sans-serif;
+  border-radius: 27.5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 .p-left__sub-title {
   text-align: center;
@@ -473,10 +477,10 @@ main {
   font-family: "Lato", sans-serif;
 }
 .p-left__card-1 {
-  background: linear-gradient(90deg, rgba(97, 97, 97, 0.5647058824) 0%, rgba(155, 197, 195, 0.5647058824) 100%);
+  background: linear-gradient(90deg, #616161 0%, #9bc5c3 100%);
 }
 .p-left__card-2 {
-  background: rgba(100, 106, 120, 0.5647058824);
+  background: #646a78;
   text-align: right;
 }
 .p-left__card {
@@ -522,8 +526,13 @@ main {
   background: url("../img/robot.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   transition: 0.3s;
+}
+@media only screen and (max-width: 479.98px) {
+  .p-right::after {
+    background-position: center;
+  }
 }
 .p-right:hover::after {
   width: 105%;
@@ -598,14 +607,335 @@ main {
     height: 50px;
   }
 }
+.login {
+  width: 100%;
+  height: calc(100svh - 150px);
+  padding: 0 9px;
+  z-index: 10;
+}
+.login__body {
+  display: grid;
+  grid-template-columns: 1.2fr 0.5fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: calc(100svh - 150px);
+  gap: 9px;
+}
+.login__left, .login__right {
+  border-radius: 27.5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.login__left {
+  background: #424242;
+}
+.login__right {
+  position: relative;
+}
+.login__right::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url("../img/hand.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media screen and (max-width: 767.98px) and (max-width: 991.98px) {
+  .login__body {
+    grid-template-columns: 0.75fr 0.5fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .login__body {
+    grid-template-columns: 1fr;
+  }
+  .login__right {
+    display: none;
+  }
+}
+
+.form {
+  width: 50%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: "Lato", sans-serif;
+  padding: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .form {
+    width: 80%;
+  }
+}
+.form__title {
+  font-weight: 700;
+  font-size: calc(20px + 0.25vw);
+  color: #ffffff;
+  text-align: center;
+}
+.form__sub-text {
+  font-weight: 600;
+  font-size: calc(10px + 0.2vw);
+  text-align: center;
+}
+.form__span {
+  color: #AFBDDD;
+}
+.form__body {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__row {
+  display: flex;
+  flex-direction: column;
+}
+.form__label {
+  font-weight: 800;
+  font-size: calc(10px + 0vw);
+  color: #AFBDDD;
+}
+.form__input {
+  background: rgba(217, 217, 217, 0.21);
+  border: 2px solid #ffffff;
+  padding: 10px 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  font-size: calc(10px + 0.2vw);
+}
+.form__buttons {
+  display: flex;
+  gap: 20px;
+}
+.form__btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  width: 100%;
+  font-size: calc(10px + 0.2vw);
+  white-space: nowrap;
+  color: #ffffff;
+}
+.form__btn-accesnt {
+  background: #AFBDDD;
+}
+.form__btn-border {
+  background: rgba(217, 217, 217, 0.21);
+  border: 2px solid #ffffff;
+  color: #AFBDDD;
+}
+.form__bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form__icons {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media only screen and (max-width: 767.98px) {
+  .form__icons {
+    justify-content: space-between;
+  }
+}
+.form__icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(217, 217, 217, 0.1607843137);
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 40px;
+}
+.form__icon {
+  width: 30px;
+  height: 30px;
+  color: rgba(255, 255, 255, 0.4784313725);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.form__icon-wrapper:hover .form__icon {
+  color: #ffffff;
+}
+.form__sub-title {
+  text-align: center;
+  font-size: calc(15px + 0.25vw);
+}
+
+.info {
+  width: 100%;
+  height: calc(100svh - 150px);
+  padding: 0 9px;
+  z-index: 10;
+}
+.info__body {
+  display: grid;
+  grid-template-columns: 0.5fr 1.2fr;
+  grid-template-rows: 1fr;
+  width: 100%;
+  height: calc(100svh - 150px);
+  gap: 9px;
+}
+.info__left, .info__right {
+  border-radius: 27.5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.info__left {
+  position: relative;
+}
+.info__left::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url("../img/robot-info.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.info__right {
+  background: #424242;
+  padding: 20px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+@media screen and (max-width: 767.98px) and (max-width: 991.98px) {
+  .info__body {
+    grid-template-columns: 0.75fr 0.5fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .info__body {
+    grid-template-columns: 1fr;
+  }
+  .info__left {
+    display: none;
+  }
+}
+.info__title {
+  font-weight: 700;
+  font-size: calc(20px + 0.25vw);
+  font-family: AvanGarde_ff;
+  text-align: center;
+  padding-bottom: 50px;
+}
+@media only screen and (max-width: 767.98px) {
+  .info__title {
+    padding-bottom: 30px;
+  }
+}
+.info__flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 20px;
+  margin: 0 auto;
+  flex: 1 1 auto;
+}
+.info__row {
+  display: flex;
+  align-items: stretch;
+}
+.info__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+  z-index: 2;
+}
+@media only screen and (max-width: 400px) {
+  .info__text-wrapper {
+    width: 100%;
+  }
+}
+.info__text {
+  font-size: calc(10px + 0.3vw);
+  line-height: 151.9%;
+  color: #ffffff;
+}
+.info__img {
+  position: relative;
+  width: 50%;
+}
+@media only screen and (max-width: 560px) {
+  .info__img {
+    opacity: 0.6;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .info__img {
+    display: none;
+  }
+}
+.info__img img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.posibilities__left {
+  position: relative;
+  border-radius: 27.5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.posibilities__left::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url("../img/robot-broke.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .posibilities__left {
+    display: none;
+  }
+}
+
 /* Define the section styles */
 .section {
-  z-index: -2;
-  visibility: hidden;
   opacity: 0;
   max-height: calc(100svh - 150px);
   overflow: hidden;
   transition: 0.5s;
+  visibility: hidden;
+  position: absolute;
 }
 
 /* Show the active section */
