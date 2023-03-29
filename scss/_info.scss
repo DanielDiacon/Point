@@ -92,6 +92,9 @@
       font-size: calc(10px + 6  * (100vw / $maxWidthContainer));
       line-height: 151.9%;
       color: $white;
+      @media only screen and (max-width:$mobile) {
+         line-height: 1.2;
+      }
    }
    &__img {
       position: relative;
