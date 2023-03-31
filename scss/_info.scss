@@ -61,6 +61,7 @@
       font-family: $fontFamilyAvanGarde;
       text-align: center;
       padding-bottom: 50px;
+      text-transform: uppercase;
       @media only screen and (max-width:$mobile) {
          padding-bottom: 30px;
       }

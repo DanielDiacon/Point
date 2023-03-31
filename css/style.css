@@ -842,6 +842,7 @@ main {
   font-family: AvanGarde_ff;
   text-align: center;
   padding-bottom: 50px;
+  text-transform: uppercase;
 }
 @media only screen and (max-width: 767.98px) {
   .info__title {
@@ -935,6 +936,35 @@ main {
 }
 @media only screen and (max-width: 767.98px) {
   .posibilities__left {
+    display: none;
+  }
+}
+
+.motivation {
+  padding: 0 9px;
+}
+.motivation__left {
+  position: relative;
+  border-radius: 27.5px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.motivation__left::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: url(../img/robot-motovation.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+@media only screen and (max-width: 767.98px) {
+  .motivation__left {
     display: none;
   }
 }
