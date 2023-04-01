@@ -63,7 +63,7 @@
       padding-bottom: 50px;
       text-transform: uppercase;
       @media only screen and (max-width:$mobile) {
-         padding-bottom: 30px;
+         padding-bottom: 20px;
       }
    }
    &__flex {
@@ -75,6 +75,10 @@
       margin: 0 auto;
       flex: 1 1 auto;
       padding: 40px;
+      padding-top: 20px;
+      @media only screen and (max-width:$mobile) {
+         padding-top: 0;
+      }
    }
    &__row{
       display: flex;

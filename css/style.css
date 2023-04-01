@@ -846,7 +846,7 @@ main {
 }
 @media only screen and (max-width: 767.98px) {
   .info__title {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 .info__flex {
@@ -858,6 +858,12 @@ main {
   margin: 0 auto;
   flex: 1 1 auto;
   padding: 40px;
+  padding-top: 20px;
+}
+@media only screen and (max-width: 767.98px) {
+  .info__flex {
+    padding-top: 0;
+  }
 }
 .info__row {
   display: flex;
