@@ -569,7 +569,7 @@ main {
   opacity: 0.6;
 }
 
-@media only screen and (max-width: 767.98px) {
+@media (orientation: portrait) and (max-width: 991.98px) {
   .productive__body {
     display: flex;
     flex-direction: column;
@@ -661,6 +661,14 @@ main {
   }
 }
 
+@media (orientation: portrait) and (max-width: 991.98px) {
+  .login__body {
+    grid-template-columns: 1fr;
+  }
+  .login__right {
+    display: none;
+  }
+}
 .form {
   width: 50%;
   position: relative;

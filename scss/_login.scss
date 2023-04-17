@@ -52,7 +52,16 @@
       }
    }
 }
-
+@media (orientation: portrait) and (max-width:$tablet){
+   .login{
+      &__body{
+         grid-template-columns: 1fr;
+      }
+      &__right{
+         display: none;
+      }
+   }
+}
 .form {
    width: 50%;
    position: relative;
